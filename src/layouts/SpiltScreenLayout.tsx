@@ -1,3 +1,5 @@
+import React from "react";
+
 interface SplitScreenLayoutProps {
   leftChild: React.ReactNode;
   rightChild: React.ReactNode;
@@ -12,21 +14,24 @@ const SplitScreenLayout: React.FC<SplitScreenLayoutProps> = ({
   rightBgImageMobile,
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row h-screen">
-      <div className="w-full lg:w-3/5 flex items-center justify-center bg-gray-100">
+    <div className="flex flex-col-reverse lg:flex-row h-screen">
+      <div className="w-full h-3/4 lg:w-3/5 lg:h-screen flex items-center justify-center bg-gray-100">
         {leftChild}
       </div>
+
+      {/* Mobile background image - Hidden on large screens */}
       <div
-        className="w-full md:w-1/2 flex items-center justify-center bg-cover bg-center md:hidden"
+        className="w-full h-1/2 lg:hidden flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${rightBgImageMobile})`,
         }}
-        // Visible only on mobile
       >
         {rightChild}
       </div>
+
+      {/* Desktop background image - Visible only on large screens */}
       <div
-        className="w-full md:w-1/2 items-center justify-center bg-cover bg-center hidden md:flex"
+        className="hidden lg:flex w-1/2 items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${rightBgImageDesktop})`,
         }}

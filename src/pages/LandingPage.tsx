@@ -33,7 +33,7 @@ const LandingPage: React.FC = () => {
           </button>
         </div>
       }
-      rightChild={<div>{/* Additional content or leave empty */}</div>}
+      rightChild={<div>{}</div>}
       rightBgImageDesktop={heroImage} // Desktop image URL
       rightBgImageMobile={heroImageMobile} // Mobile image URL
     />
