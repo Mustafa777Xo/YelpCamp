@@ -26,7 +26,8 @@ const SplitScreenLayout: React.FC<SplitScreenLayoutProps> = ({
           backgroundImage: `url(${rightBgImageMobile})`,
         }}
       >
-        {rightChild}
+        <div className="flex flex-col">
+            {rightChild}</div>
       </div>
 
       {/* Desktop background image - Visible only on large screens */}

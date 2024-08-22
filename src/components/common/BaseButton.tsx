@@ -15,7 +15,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
   const typeClasses = {
     outlined:
       "border border-blue-500 text-blue-500 bg-transparent hover:bg-blue-500 hover:text-white",
-    filled: "bg-blue-500 text-white hover:bg-blue-600",
+    filled: "bg-black text-white rounded",
     text: "bg-transparent text-blue-500 hover:underline",
   };
   return (
