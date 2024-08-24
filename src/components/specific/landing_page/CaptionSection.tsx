@@ -1,7 +1,8 @@
-import BaseButton from "../../common/BaseButton";
-import Logo from "../../../assets/images/Logo.svg";
+import BaseButton from "@/components/common/BaseButton";
+import Logo from "@/assets/images/Logo.svg";
 import CampFeature from "./CampFeature";
 import PartneredWith from "./PartneredWith";
+import { Link } from "react-router-dom";
 
 const features = [
   "Add your own camp suggestions.",
@@ -26,12 +27,15 @@ const CaptionSection = () => {
           </li>
         ))}
       </ul>
-      <BaseButton
-        btnType="filled"
-        text="
+      <Link to="/home">
+        <BaseButton
+          btnType="filled"
+          text="
         View Campgrounds
       "
-      />
+        />
+      </Link>
+
       <PartneredWith />
     </div>
   );

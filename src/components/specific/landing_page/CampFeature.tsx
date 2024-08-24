@@ -1,4 +1,4 @@
-import checkMarkIcon from "../../../assets/icons/checkmark.svg";
+import checkMarkIcon from "@/assets/icons/checkmark.svg";
 interface featureProp {
   featureText: string;
 }

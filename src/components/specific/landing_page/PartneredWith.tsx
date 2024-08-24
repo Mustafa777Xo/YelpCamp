@@ -1,6 +1,6 @@
-import plumGuideLogo from "../../../assets/images/Plum Guide.svg";
-import bookingsLogo from "../../../assets/images/booking.svg";
-import airbnbLogo from "../../../assets/images/airbnb.svg";
+import plumGuideLogo from "@/assets/images/Plum Guide.svg";
+import bookingsLogo from "@/assets/images/booking.svg";
+import airbnbLogo from "@/assets/images/airbnb.svg";
 const PartneredWith = () => {
   return (
     <div className="container mt-10">
