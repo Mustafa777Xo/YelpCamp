@@ -1,4 +1,4 @@
-import logo from "@/assets/images/logo.svg";
+import logo from "@/assets/images/Logo.svg";
 import { useState } from "react";
 import BaseButton from "@/components/common/BaseButton";
 import HamburgerMenu from "./HamburgerMenu";
