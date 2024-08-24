@@ -1,3 +1,4 @@
+import NavBar from "@/components/layout/navbar/NavBar";
 import { Outlet, useLocation } from "react-router-dom";
 
 const MainLayout = () => {
@@ -7,7 +8,7 @@ const MainLayout = () => {
   const hideNavbarPaths = ["/", "/signin", "/signup"];
   return (
     <div>
-      {!hideNavbarPaths.includes(location.pathname) && <h1>Navbar here</h1>}
+      {!hideNavbarPaths.includes(location.pathname) && <NavBar />}
       <Outlet />
     </div>
   );

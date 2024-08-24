@@ -1,8 +1,7 @@
-import NavBar from "@/components/layout/NavBar";
 const HomePage = () => {
   return (
     <div>
-      <NavBar />
+        <h2>home boady</h2>
     </div>
   );
 };
