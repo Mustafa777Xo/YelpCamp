@@ -11,18 +11,18 @@ const features = [
 ];
 const CaptionSection = () => {
   return (
-    <div className="px-12 lg:h-screen lg:pt-5 lg:px-24">
-      <img src={Logo} alt="" className="lg:mb-60 mb-8 mt-2" />
-      <h1 className="text-4xl lg:text-6xl font-bold mb-4">
+    <div className="px-12 xl:h-screen xl:pt-5 xl:px-24 w-screen">
+      <img src={Logo} alt="" className="xl:mb-60 mb-3 mt-1" />
+      <h1 className="text-2xl xl:text-6xl font-bold mb-2">
         Explore the best camps on Earth.
       </h1>
-      <p className="text-sm md:text-md lg:text-xl mb-6 text-gray-500">
+      <p className="text-sm md:text-md xl:text-xl mb-6 text-gray-500">
         YelpCamp is a curated list of the best camping spots on Earth.
         Unfiltered and unbiased reviews.
       </p>
       <ul className="mb-6">
         {features.map((feature) => (
-          <li className="flex items-center mb-2 text-gray-500">
+          <li className="flex items-center mb-1 text-gray-500">
             {<CampFeature featureText={feature} />}
           </li>
         ))}
