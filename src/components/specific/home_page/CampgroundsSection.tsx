@@ -45,7 +45,7 @@ const CampgroundsSection = () => {
   ];
 
   return (
-    <div className="mt-10 px-5 max-w-screen-2xl mx-auto xl:px-0">
+    <div className="mt-10 px-5 max-w-screen-2xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {cards.map((card, index) => (
           <CampgroundCard

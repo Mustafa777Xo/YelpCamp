@@ -8,7 +8,7 @@ const HamburgerMenu = ({ onClick }: HamburgerMenuProps) => (
   <img
     src={hamburgerMenu}
     alt="Menu"
-    className="p-2 bg-green-200 rounded-md lg:hidden cursor-pointer"
+    className="p-2 bg-green-100 rounded-md lg:hidden cursor-pointer"
     onClick={onClick}
   />
 );
