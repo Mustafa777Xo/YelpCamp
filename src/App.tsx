@@ -9,6 +9,7 @@ import LandingPage from "./pages/LandingPage";
 import NotFound from "./pages/NotFound";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -17,6 +18,8 @@ const App = () => {
         <Route index element={<LandingPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+
         <Route path="*" element={<NotFound />} />
       </Route>
     )

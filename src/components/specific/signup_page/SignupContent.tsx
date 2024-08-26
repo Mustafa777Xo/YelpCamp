@@ -4,11 +4,11 @@ import { FaArrowLeft } from "react-icons/fa";
 import logo from "@/assets/images/Logo.svg";
 import { Link } from "react-router-dom";
 
-const LoginContent = () => {
+const SignupContent = () => {
   return (
     <>
       <div className="container max-w-xl">
-        <div className="flex flex-col gap-8 mt-5 max-w-sm px-5 lg:max-w-xl mx-auto ">
+        <div className="flex flex-col xl:gap-8 max-w-sm px-2 lg:max-w-xl mx-auto ">
           <div className="flex gap-2 xl:gap-64 xl:absolute  xl:top-3 ">
             <img src={logo} alt="" />
             <Link to="/home">
@@ -22,10 +22,15 @@ const LoginContent = () => {
           <h1 className="text-2xl xl:text-4xl font-bold">
             Start exploring camps from all around the world.
           </h1>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col xl:gap-4">
             <BaseTextField
-              label="User Name"
-              placeholder="jonndoe_91"
+              label="Enter your email"
+              placeholder="example@gmail.com"
+              type="text"
+            />
+            <BaseTextField
+              label="Full Name"
+              placeholder="ex: john doe"
               type="text"
             />
             <BaseTextField
@@ -33,13 +38,18 @@ const LoginContent = () => {
               placeholder="Enter your password"
               type="password"
             />
-            <BaseButton text="Login" btnType="filled" />
+            <BaseTextField
+              label="Retype password"
+              placeholder="password"
+              type="password"
+            />
+            <BaseButton text="Signup" btnType="filled" />
 
             <div className="flex items-center gap-2">
-              <p>Not a user yet?</p>
-              <Link to="/signup">
+              <p>Have and accont?</p>
+              <Link to="/login">
                 <a href="#" className="text-green-500 underline">
-                  Create an account
+                  Login
                 </a>
               </Link>
             </div>
@@ -50,4 +60,4 @@ const LoginContent = () => {
   );
 };
 
-export default LoginContent;
+export default SignupContent;
