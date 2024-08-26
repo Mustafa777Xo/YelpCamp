@@ -6,7 +6,7 @@ const MainLayout = () => {
   const location = useLocation();
 
   // Paths where the Navbar should be hidden
-  const hideNavbarPaths = ["/", "/signin", "/signup"];
+  const hideNavbarPaths = ["/", "/login", "/signup"];
   return (
     <div>
       {!hideNavbarPaths.includes(location.pathname) && <NavBar />}

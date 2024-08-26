@@ -1,4 +1,5 @@
 import BaseButton from "@/components/common/BaseButton";
+import { Link } from "react-router-dom";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -17,7 +18,10 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => (
         ✖
       </button>
     </div>
-    <BaseButton text="login" btnType="text" />
+    <Link to="/login">
+      <BaseButton text="login" btnType="text" />
+    </Link>
+
     <BaseButton text="create an account" btnType="filled" />
   </div>
 );
