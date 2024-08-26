@@ -24,8 +24,8 @@ const LoginContent = () => {
           </h1>
           <div className="flex flex-col gap-2">
             <BaseTextField
-              label="User Name"
-              placeholder="jonndoe_91"
+              label="Enter your email"
+              placeholder="example@gmail.com"
               type="text"
             />
             <BaseTextField

@@ -22,7 +22,9 @@ const NavBar = () => {
             <Link to="/login">
               <BaseButton text="login" btnType="text" />
             </Link>
-            <BaseButton text="create an account" btnType="filled" />
+            <Link to="/signup">
+              <BaseButton text="create an account" btnType="filled" />
+            </Link>
           </div>
         </div>
       </div>
