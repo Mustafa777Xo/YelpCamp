@@ -2,7 +2,7 @@ import placehodlerImg from "@/assets/images/camps/Buloy_Springs.jpg";
 function CampCard() {
   return (
     <>
-      <div className="container border rounded p-20">
+      <div className="container border rounded p-5 md:p-20">
         <div className="flex flex-col">
           <img src={placehodlerImg} alt="" />
           <div className="flex justify-between items-center mt-2 mb-2">
@@ -15,7 +15,7 @@ function CampCard() {
             to see wildlife and is rated as moderate. The trail is primarily
             used for hiking.
           </p>
-          <p>Submitted by Andrew Mike</p>
+          <p className="mt-4">Submitted by Andrew Mike</p>
         </div>
       </div>
     </>

@@ -27,7 +27,7 @@ const comments = [
 const CommentSection = () => {
   return (
     <>
-      <div className="container border rounded p-10">
+      <div className="container border rounded p-2 md:p-10 mx-auto">
         {comments.map((comment, index) => (
           <div key={comment.id}>
             <Comment
@@ -39,12 +39,13 @@ const CommentSection = () => {
             {/* Add divider except after the last comment */}
           </div>
         ))}
-
-        <BaseButton
-          text="Leave a Review"
-          icon={FaCommentDots}
-          btnType="filled"
-        />
+        <div className="flex justify-end">
+          <BaseButton
+            text="Leave a Review"
+            icon={FaCommentDots}
+            btnType="filled"
+          />
+        </div>
       </div>
     </>
   );
