@@ -1,10 +1,12 @@
-
+import notFoundImg from "@/assets/images/not_found.svg";
 const NotFound = () => {
   return (
     <div>
-      <h1>Page NotFound</h1>
+      <div className="container-sm h-screen my-auto lg:w-2/5 mx-auto">
+          <img src={notFoundImg} alt="" />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;
