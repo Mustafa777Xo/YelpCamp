@@ -1,12 +1,15 @@
+import { useState } from "react";
 import BaseButton from "@/components/common/BaseButton";
 import Comment from "./Comment";
+import AddComment from "./AddComment"; // Assuming AddComment is the component to display the form
 import { FaCommentDots } from "react-icons/fa";
+
 const comments = [
   {
     id: 1,
     user: "Adam Jones",
     comment:
-      "Honestly one of the best experiences ever. took us a while to figure outow to get there but it was amazing!",
+      "Honestly one of the best experiences ever. took us a while to figure out how to get there but it was amazing!",
     time: "13h ago",
   },
   {
@@ -24,7 +27,18 @@ const comments = [
     time: "3 days ago",
   },
 ];
+
 const CommentSection = () => {
+  const [showOverlay, setShowOverlay] = useState(false);
+
+  const handleAddCommentClick = () => {
+    setShowOverlay(true);
+  };
+
+  const closeOverlay = () => {
+    setShowOverlay(false);
+  };
+
   return (
     <>
       <div className="container border rounded p-2 md:p-10 mx-auto">
@@ -36,17 +50,34 @@ const CommentSection = () => {
               time={comment.time}
             />
             {index < comments.length - 1 && <hr />}{" "}
-            {/* Add divider except after the last comment */}
+            {/* Divider except after last comment */}
           </div>
         ))}
         <div className="flex justify-end">
-          <BaseButton
-            text="Leave a Review"
-            icon={FaCommentDots}
-            btnType="filled"
-          />
+          <div onClick={handleAddCommentClick}>
+            <BaseButton
+              text="Leave a Review"
+              icon={FaCommentDots}
+              btnType="filled"
+            />
+          </div>
         </div>
       </div>
+
+      {/* Overlay for Add Comment */}
+      {showOverlay && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg mx-auto">
+            <AddComment />
+            <button
+              onClick={closeOverlay}
+              className="mt-4 w-full bg-gray-200 py-2 rounded text-black hover:bg-gray-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
