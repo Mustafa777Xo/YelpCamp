@@ -22,7 +22,9 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => (
       <BaseButton text="login" btnType="text" />
     </Link>
 
-    <BaseButton text="create an account" btnType="filled" />
+    <Link to="/signup">
+      <BaseButton text="create an account" btnType="filled" />
+    </Link>
   </div>
 );
 
