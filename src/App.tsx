@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import CampDetailsPage from "./pages/CampDetailsPage";
+import AddCampPage from "./pages/AddCampPage";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/camp/:id" element={<CampDetailsPage />} />
+        <Route path="/add-camp" element={<AddCampPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>
