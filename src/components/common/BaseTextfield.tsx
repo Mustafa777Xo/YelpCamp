@@ -5,6 +5,9 @@ interface BaseTextFieldProps {
   label?: string;
   placeholder: string;
   type: string;
+  // NOTE: Make it reuqired later
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const BaseTextField: React.FC<BaseTextFieldProps> = ({
@@ -12,6 +15,8 @@ const BaseTextField: React.FC<BaseTextFieldProps> = ({
   label,
   placeholder,
   type,
+  value,
+  onChange,
 }) => {
   return (
     <div className="w-full mb-4 xl:mb-0">
@@ -27,6 +32,8 @@ const BaseTextField: React.FC<BaseTextFieldProps> = ({
         <input
           type={type}
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
           className={`w-full py-3 pr-4 ${
             icon ? "pl-10" : "pl-4"
           } border rounded-md focus:outline-none focus:ring-2 focus:ring-black `}

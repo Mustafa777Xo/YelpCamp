@@ -5,12 +5,14 @@ interface BaseButtonProps {
   text: string;
   icon?: IconType;
   btnType: "outlined" | "filled" | "text";
+  onClick?: () => void;
 }
 
 const BaseButton: React.FC<BaseButtonProps> = ({
   text,
   icon: Icon,
   btnType = "filled",
+  onClick,
 }) => {
   const baseClasses =
     "px-4 py-2 rounded focus:outline-none inline-flex justify-center items-center";
@@ -22,7 +24,10 @@ const BaseButton: React.FC<BaseButtonProps> = ({
   };
 
   return (
-    <button className={`${baseClasses} ${typeClasses[btnType]}`}>
+    <button
+      className={`${baseClasses} ${typeClasses[btnType]}`}
+      onClick={onClick}
+    >
       {Icon && <Icon className="mr-2" />}
       <span className="text-center">{text}</span>
     </button>
