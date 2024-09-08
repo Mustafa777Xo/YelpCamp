@@ -4,27 +4,27 @@ import { FaArrowLeft } from "react-icons/fa";
 import logo from "@/assets/images/Logo.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import { Users } from "@/types/types";
 const SignupContent = () => {
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
   const [password, setPassword] = useState("");
   const [reTypePassword, setreTypePassword] = useState("");
 
-  const [errors, setErrors] = useState<{
-    email?: string;
-    password?: string;
-    fullName?: string;
-    reTypePassword?: string;
-  }>({});
+  const [errors, setErrors] = useState<Users>({
+    email: "",
+    password: "",
+    reTypePassword: "",
+    fullName: "",
+  });
 
   const handleSignUp = () => {
-    const newErrors: {
-      email?: string;
-      password?: string;
-      fullName?: string;
-      reTypePassword?: string;
-    } = {};
+    const newErrors: Users = {
+      email: "",
+      password: "",
+      reTypePassword: "",
+      fullName: "",
+    };
 
     if (!email) newErrors.email = "Email is required";
     if (!fullName) newErrors.fullName = "fullName is required";
@@ -37,7 +37,12 @@ const SignupContent = () => {
       // Proceed with the login logic
       console.log("Logging in...", { email, password });
       // Clear errors
-      setErrors({});
+      setErrors({
+        email: "",
+        password: "",
+        reTypePassword: "",
+        fullName: "",
+      });
     }
   };
   return (
